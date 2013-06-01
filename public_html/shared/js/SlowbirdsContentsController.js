@@ -1,7 +1,8 @@
 var SCC;
 (function(){
-var SlowbirdsContentsController = function(config){
-  if(typeof($) == "undefined") {
+var SlowbirdsContentsController;
+  SlowbirdsContentsController = function () {
+  if (typeof($) == "undefined") {
     return false;
   }
   this.config = {
@@ -13,10 +14,11 @@ var SlowbirdsContentsController = function(config){
     imageBusy: "/shared/images/icon_loading.gif",
     index: "top",
     content: "#contents"
-  }
+  };
   this.init();
   this.entire = false;
-}
+  return this;
+};
 SlowbirdsContentsController.prototype = {
   /* utility */
   init: function() {
@@ -42,14 +44,13 @@ SlowbirdsContentsController.prototype = {
   },
   scrollto: function() {
     var target = location.hash ? location.hash:false;
-    if(!target) {
-      var position = 0;
-    }else {
-      var position = $(target).offset().top;
+    var position = 0;
+    if(target) {
+      position = $(target).offset().top;
       position = position-50;
     }
     $($.browser.safari ? 'body' : 'html').animate({scrollTop:position}, 400, 'swing');
-    return;
+    return this;
   },
   isScript: function(content) {
     for(var i=0;i<this.config.script.length;i++) {
@@ -59,11 +60,20 @@ SlowbirdsContentsController.prototype = {
     }
     return false;
   },
+  isPushstate: function() {
+    return typeof(history.pushState) !== "undefined";
+  },
   unhash: function(string) {
     return string.replace(/\#[a-zA-Z_0-9]+$/,"");
   },
-  unslash function(string) {
-    return string.replace(/^\//,"");
+  unslash: function(string) {
+    if(string.match(/^\/(.+)$/)) {
+      string =  RegExp.$1;
+    }
+    if(string.match(/^(.+)\/$/)) {
+      string = RegExp.$1;
+    }
+    return string;
   },
   addClass: function(func) {
     this.entire = func;
@@ -87,6 +97,10 @@ SlowbirdsContentsController.prototype = {
   /* trigger */
   getContent: function(content,urlchange) {
     content = this.unslash(content);
+    if(!this.isPushstate()) {
+      location.href = content;
+      return false;
+    }
     if(!content || content == "") {
       content = this.config.index;
     }
