@@ -1,4 +1,4 @@
 slowbirds.org
 =============
 
-俺のサイトだ。
+history.pushState with serverside.
