@@ -1,0 +1,409 @@
+@charset "utf-8";
+/*------------------------------------------------
+
+	CSS2.0 Document
+	template ver.0.2
+	since: 2008.05.19;
+	modified: 2008.05.19;
+	editor: akato;
+	
+	for parts.styling
+
+------------------------------------------------*/
+body {
+  background: #222 url(../images/slowbirdsorg_bg.png) 0 0 repeat;
+}
+div#identity {
+}
+div#identity h1 {
+  margin: 0;
+  padding-bottom: 50px;
+}
+#container {
+}
+
+.servicelist {
+  margin: 0 0 25px 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.servicelist li {
+  display: inline;
+}
+.servicelist li a {
+  background-image: url(../images/icons_services.png);
+  background-repeat: no-repeat;
+  display: block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: -100px;
+  float: left;
+  margin: 0 5px 0 0;
+
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-property: background-position;
+
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-property: background-position;
+
+  -moz-transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-property: background-position;
+}
+.servicelistTwitter {
+  background-position: 0 -40px;
+}
+.servicelistTwitter:hover {
+  background-position: 0 0;
+}
+.servicelistTumblr {
+  background-position: -38px -40px;
+}
+.servicelistTumblr:hover {
+  background-position: -38px 0;
+}
+.servicelistFacebook {
+  background-position: -76px -40px;
+}
+.servicelistFacebook:hover {
+  background-position: -76px 0;
+}
+.servicelistGplus {
+  background-position: -114px -40px;
+}
+.servicelistGplus:hover {
+  background-position: -114px 0;
+}
+.servicelistLinkedin {
+  background-position: -230px -40px;
+}
+.servicelistLinkedin:hover {
+  background-position: -230px 0;
+}
+.servicelistDelicious {
+  background-position: -305px -40px;
+}
+.servicelistDelicious:hover {
+  background-position: -305px 0;
+}
+
+#utility {
+  padding: 12px;
+  text-align: center;
+}
+#utility a {
+  text-decoration: none;
+}
+
+#contents {
+  margin: 0 15px;
+  padding: 15px;
+  color: #fff;
+}
+#contents a {
+  color: #fff;
+}
+#contents h1,
+#contents h2,
+#contents p,
+#contents div {
+  margin-top: 0;
+}
+.navigation {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  margin: 0 15px;
+  padding: 5px 20px 10px;
+  color: #fff;
+  background: url(../images/bg_black_half.png) 0 0 repeat;
+  z-index: 999;
+}
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+}
+.navigation h2 {
+  display: none;
+}
+.navigation h1,
+.navigation p,
+.navigation div {
+  margin-top: 0;
+}
+.navigation li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 140%;
+}
+.navigation li ul {
+  display: inline;
+}
+.navigation li li {
+  margin-right: 0;
+  margin-left: 10px;
+  font-size: 80%;
+}
+
+/********************************************
+* common
+********************************************/
+h2 {
+  margin: 0 0 10px;
+  font-size: 200%;;
+}
+h2 a {
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+  margin: 0 0 0 -5px;
+}
+h2 a:hover {
+  background: transparent url(../images/bg_white_half.png) 0 0 repeat;
+}
+blockquote {
+  border: solid 1px; #fff;
+  margin: 7px;
+  padding: 7px;
+  background: transparent url(../images/bg_white_half.png) 0 0 repeat;
+}
+cite {
+  text-align: right;
+}
+#loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#loading img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+/********************************************
+* big navigation
+********************************************/
+.bigNavigation li {
+  position: fixed;
+  top: 50%;
+  width: 150px;
+  height: 80px;
+  overflow: hidden;
+}
+.bigNavigation li a {
+  display: block;
+  width: 150px;
+  height: 80px;
+  overflow: hidden;
+}
+@-webkit-keyframes navroll_left {
+  0% { left: -75px; }
+  100% { left: 0; }
+}
+@-webkit-keyframes navroll_right {
+  0% { right: -75px; }
+  100% { right: 0; }
+}
+.bigNavigation li:hover {
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+  background-position-x: 0px;
+}
+.bigNavigationNext {
+  right: -115px;
+  background: url(../images/btn_next.png) 0 0 no-repeat;
+}
+.bigNavigationNext:hover {
+  -webkit-animation-name: navroll_right;
+  right: 0;
+}
+
+.bigNavigationPrev {
+  left: -115px;
+  background: url(../images/btn_prev.png) 0 0 no-repeat;
+}
+.bigNavigationPrev:hover {
+  -webkit-animation-name: navroll_left;
+  left: 0;
+}
+
+
+/********************************************
+* blog navigation
+********************************************/
+.blogNav {
+  
+}
+.blogNavColumn {
+  width: 230px;
+  height: 200px;
+  overflow: hidden;
+  float: left;
+  background: transparent url(../images/bg_white_half.png) 0 0 repeat;
+  padding: 7px;
+  margin: 0 7px 7px 0;
+}
+.blogNavColumn h2 {
+  font-size: 140%;
+}
+.blogNavColumn a {
+  margin-right: 2px;
+}
+.blogNavCategory {
+}
+.blogNavCategory {
+}
+.blogNavTag {
+}
+.blogNavFeed {
+  background: transparent none 0 0 repeat;
+  width: auto;
+  height: auto;
+  float: right;
+  padding: 60px 60px 0 0;
+}
+.blogNavFeed p a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url(../images/icon_feed.png) 0 0 no-repeat;
+  text-indent: -999em;
+  overflow: hidden;
+}
+.blogNavFeed p a:hover {
+  background-position: 0 -80px;
+}
+
+/********************************************
+* blog body
+********************************************/
+#blog {
+  
+}
+.blogContent {
+  
+}
+.blogContentBody {
+  line-height: 1.6;
+}
+.blogContentBody p {
+  margin-bottom: 0.7em;
+}
+
+.blogContentPosted {
+  text-align: right;
+  margin-top: 30px;
+}
+  .blogContentPosted > li {
+    display: inline;
+  }
+  .blogContentPosted > li+li {
+    border-left: #fff solid 1px;
+    padding-left: 7px;
+    margin-left: 7px;
+  }
+  .blogContentPostedDate {
+    
+  }
+  .blogContentPostedCategory {
+    
+  }
+  .blogContentPostedTag {
+    
+  }
+  .blogContentPostedAuthor {
+    
+  }
+
+.blogContentComment {
+  
+}
+
+#tumblrQuotesNav {
+  margin: 0 0 12px;
+}
+#tumblrQuotesNav li {
+  padding: 0 12px 0 0;
+  cursor: pointer;
+  display: inline;
+  font-size: 200%;
+}
+
+/********************************************
+* tumblrviewer quotes
+********************************************/
+#showTumblrQuotesList {
+  padding-left: 5px;
+}
+#showTumblrQuotesList li {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: solid 1px #fff;
+  font-size: 300%;
+  margin: 0 5px 5px 0;
+}
+#showTumblrQuotesList li blockquote {
+  border: none;
+  margin: 0;
+}
+#showTumblrQuotesList li blockquote * {
+  margin: 0;
+}
+#showTumblrQuotesItem {
+  background: #000;
+  text-align; left;
+  color: #fff;
+}
+/********************************************
+* tumblrviewer images
+********************************************/
+#showTumblrPhotosList {
+  padding-left: 5px;
+}
+#showTumblrPhotosList li {
+  width: 250px;
+  height: 250px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  font-size: 0;
+}
+#showTumblrPhotosList li blockquote,
+#showTumblrPhotosList li blockquote * {
+  margin: 0;
+  padding: 0;
+}
+#showTumblrPhotosItem {
+  background: #000;
+  text-align; left;
+  color: #fff;
+  width: 500px;
+  overflow: hidden;
+  font-size: 60%;
+}
+
+
+/********************************************
+* musics
+********************************************/
+
+/********************************************
+* items twitter
+********************************************/
+
+/********************************************
+* items picasa
+********************************************/

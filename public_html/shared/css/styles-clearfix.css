@@ -1,0 +1,40 @@
+@charset "utf-8";
+/*------------------------------------------------
+
+	CSS2.0 Document
+	template ver.0.2
+	since: 2008.03.07;
+	modified: 2008.05.19;
+	editor: akato;
+	
+	for only.clearfix.properties
+
+------------------------------------------------*/
+
+
+/*  clear-fix
+------------------------------------------------*/
+.clearfix:after,
+.servicelist:after,
+#showTumblrQuotesList:after,
+.blogNav:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+.clearfix,
+.servicelist,
+#showTumblrQuotesList,
+.blogNav {
+	/*\*/
+	_overflow: visible;
+	_height: 1px;
+	zoom: 1;
+	/**/
+	/*\*//*/
+	display: inline-table;
+	/**/
+}
+

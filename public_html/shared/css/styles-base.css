@@ -1,0 +1,65 @@
+@charset "utf-8";
+/*------------------------------------------------
+
+	CSS2.0 Document
+	template ver.0.2
+	since: 2008.03.07;
+	modified: 2008.05.19;
+	editor: akato;
+	
+	for base.styles
+
+------------------------------------------------*/
+
+/* base
+------------------------------------------------*/
+body {
+	background: #fff;
+	font-size: 82%;
+	color: #333;
+	line-height: 1.4;
+	text-align: center;
+}
+a {
+	color: #333;
+	text-decoration: underline;
+}
+a:hover {
+	color: #555;
+	text-decoration: none;
+}
+h1 {
+	font-size: 140%;
+	font-weight: bold;
+	margin: 15px 0 0;
+}
+h2 {
+	font-size: 120%;
+	font-weight: bold;
+	margin: 35px 0 0;
+}
+h3 {
+	font-size: 110%;
+	font-weight: bold;
+	margin: 15px 0 0;
+}
+
+/* dl横並び（dlにclearfix）
+----------------------------------------------------------*/
+dl.clearfix dt {
+	float: left;
+	clear: both;
+	width: 15%;
+	margin: 0 5% 1% 0;
+}
+dl.clearfix dd {
+	width: 100%;
+	margin: 0 0 5px;
+}
+dl.clearfix > dd {
+	float: left;
+	width: 85%;
+}
+*+html dl.clearfix > dd {
+	float: none;
+}
